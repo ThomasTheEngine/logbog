@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="Astro-pi_style.css">
+<meta charset="UTF-8">
+
+    <style>    
+/* Style the side navigation */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+} 
+/* Side navigation links */
+.sidenav a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+}
+/* Change color on hover */
+.sidenav a:hover {
+  background-color: #ADD8E6;
+  color: white;
+}
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+    </style>
+
+
+<div class="sidenav">
+  <a href="index.html">Home</a>
+  <a href="Portfolio.html">Webteknologier</a>
+   <a href="Astro-Pi_generelt.html">Astro-Pi</a>
+   <a href="Dino_game_generelt.html">Dino-game</a>
+   <a href="Databaser.html">Databaser</a>
+</div>
+
+
+<div class="content"> 
+
+
+<h2>
+
+Releavante kodestumper:
+
+</h2>  
+
+<br>
+
+<n1>
+
+Hjernen af vores kode ligger i funktionen motionDetect():
+
+</n1>
+
+<br>
+<br>
+
+<img src="kode1.png" alt="kode1">
+    
+<br>
+<br>
+
+<n1>
+
+Først nulstiller vi vores sensor (for sikkerheds skyld), med pir.wait_for_no_motion(). Det vil sige at koden vil ikke gå videre, indtil sensoren opdager ingen bevægelse. Det bekræftes med en print i terminalen: print(‘No motion detected’). 
+
+<br>
+<br>
+
+Derefter skaber man et liste, “crisp”, som kommer til at indeholde de beregnet hastigheder. Det er hvad funktionen motionDetect() returnere. Her er hvordan det sker:
+
+<br>
+<br>
+    
+1. Funktionen speed() er defineret: 
+
+</n1>
+
+<br>
+<br>
+
+<img src="kode2.png" alt="kode1">
+
+<br>
+<br>
+
+<n1>
+
+Den har en defineret variable, l, sæt til 7 (læs mere i “testmåling af sensor), tager et argument, t, og returnerer kvotienten af l divideret med t. Her genkender man godt formlen for middelhastigheden: v = d / t. 
+
+<br>
+<br>
+
+2. Variablen t bliver udregnet længere ned i koden:
+
+</n1>
+
+<br>
+<br>
+
+<img src="kode3.png" alt="kode1">
+
+<br>
+<br>
+    
+<n1>
+    
+Den t er hvad vi sætter ind i funktionen, som dermed kan udregne hastigheden. Det er forskellen i tid mellem hvornår motion sensoren opdager bevægelse til den ikke gøre mere.
+
+<br>
+<br>
+
+3. Til sidst bruger vi Python’s built-in funktion .append(), som tager variablen t, sætter den ind i funktionen speed(), som så udregner hastigheden. Så tager man hastigheden og omdanner det til en string, med Python’s str() method. 
+
+</n1>
+
+<br>
+<br>
+
+<img src="kode4.png" alt="kode1">
+
+<br>
+<br>
+    
+<n1>
+
+Her er et tilfældigt eksempel: t = 3.5 sekunder
+<br>
+speed(t) = speed(3.5) = 3.5 / 7 = 0.5
+<br>
+str(speed(3.5)) = ‘0.5’
+<br>
+Og det bliver til:
+<br>
+crisp.append(str(speed(3.5)))
+<br>
+Hvis vi skulle print det i terminalen, ville det give: [‘0.5’]
+
+<br>
+<br>
+
+Så definerer vi to variabler, “start” og “now”, til at være det tidspunkt hvor ingen motion er opdaget. “start” bruges for variablen t, og ved vores while-loop, mens “now” kun for vores while-loop.
+Til sidst defineres en sidste variable, duration, som sættes til at være 10200 sekunder, som svarer til 2 timer og 50 minutter. 
+
+<br>
+<br>
+
+Vi har nu udregnet hastighedernes middelværdi: 
+
+<br>
+<br>
+
+motionDetect() returnere “crisp”, som er en liste af alle hastigheder. 
+
+<br>
+<br>
+</n1>
+<img src="kode5.png" alt="kode">
+<n1>
+<br>
+<br>
+
+Vi sætter en variable, data, til at være hvad funktionen returnerer, så “data” er en liste. Så sætter vi en tilfældige variable, her x, lig med 0, som bliver til summen af alle vores data i listen. “i” er en anden tilfældige variable, som man vil bruge til at “iterate” gennem data-listen:
+
+<br>
+<br>
+</n1>
+<img src="kode6.png" alt="kode">
+<n1>
+<br>
+<br>
+    
+Her er et tilfældigt eksempel:
+
+<br>
+<br>
+
+Hvis data = [2, 3, 4, 5], så bliver x = 2 + 3 + 4 + 5 = 14
+
+<br>
+<br>
+
+Vi bruger float() til at specificere, at det tal den skal tage fra listen er hele kommatallet. Middelværdien beregnes med det nye x-værdi, som divideres med længden af listen, som vi får med len():
+
+<br>
+<br>
+</n1>
+<img src="kode7.png" alt="kode">
+<n1>
+<br>
+<br>
+    
+Til sidst bruger vi csv-biblioteket til at kunne skrive vores data ind i en csv-fil således:
+
+<br>
+<br>
+</n1>
+<img src="kode8.png" alt="kode">
+<n1>
+<br>
+<br>
+
+Den første linje laver en ny fil som hedder “data.csv”, og skriver ind vores data, som er listen, og middelværdien “average”.
+    
+    
+</n1>
+
+<br>
+<br>
+Tryk her for at komme tilbage:
+<br>
+<a href="Astro-Pi_vores.html"> Astro-Pi projekt </a>
+
+    </div>
+
+</html>

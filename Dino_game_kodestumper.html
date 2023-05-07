@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="Dino_game.css">
+<meta charset="UTF-8">
+
+    <style>    
+/* Style the side navigation */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+} 
+/* Side navigation links */
+.sidenav a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+}
+/* Change color on hover */
+.sidenav a:hover {
+  background-color: #ADD8E6;
+  color: white;
+}
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+    </style>
+
+
+<div class="sidenav">
+  <a href="index.html">Home</a>
+  <a href="Portfolio.html">Webteknologier</a>
+   <a href="Astro-Pi_generelt.html">Astro-Pi</a>
+   <a href="Dino_game_generelt.html">Dino-game</a>
+   <a href="Databaser.html">Databaser</a>
+</div>
+
+
+<div class="content"> 
+
+
+<h2>
+
+Relavante kodestumper:
+
+</h2>  
+
+<br>
+<br>
+    
+Forklaring af hoppe koden.
+    
+<br>
+
+<n1> 
+    
+Man kan hoppe når man trykker på space, og står på jorden. Det kan man fordi hoppe-funktionen er et if statement, der virker når der bliver trykket på space, der har keycode 32. Variablen v angiver hvor hurtigt karakteren bevæger sig, hvor negative tal er opad. Den bliver sat til at være lig med hop_højde, der angiver hvor højt figuren hopper, og der er en anden del af koden, der sørger for at der er tyngdekraft i spillet.
+
+</n1>
+
+<br>
+<br>
+
+<n1> 
+    
+kode1:
+
+</n1>
+
+<br>
+<br>
+
+<img src="kode_hop1.png" alt="hop1", width=30%,>
+
+<br>
+<br>
+    
+<n1> 
+    
+Denne kode definerer funktionen, keyPressed, og laver et if-statement, som siger at hvis mellemrummet bliver trykket og den såkaldte jump_amount er 0, så bliver der sat en hastighed opad, som man så hopper. Så sættes jump_amount til 1, så man ikke bare kan blive ved med at hoppe. 
+
+</n1>
+    
+<br>
+<br>
+
+<img src="kode_hop2.png" alt="hop1", width=30%,>
+
+<br>
+<br>
+    
+<n1> 
+    
+Dette køres hvis man er i live. Her plusses højden af spilleren med v, som gør at den vil rykke opad. Dog bliver v mindre og mindre, da der ligges a til v. a er negativt. Det vil gøre at der kommer et hop der ligner en kurve. Så snartr at personen rammer jorden, da vil personen ikke falde længere. Det gør den fordi at den hele tiden sætter højden af spilleren til højden af jorden. 
+
+</n1>
+    
+<br>
+<br>
+     
+Tryk her for at komme tilbage:
+    
+<br>
+    
+<a href="Dino_game_generelt.html"> Dino-Game projekt </a>
+
+    </div>
+
+</html>

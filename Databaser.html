@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="database-style.css">
+<title>Databaser</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+/* Style the side navigation */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+}
+
+
+/* Side navigation links */
+.sidenav a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color on hover */
+.sidenav a:hover {
+  background-color: #ADD8E6;
+  color: white;
+}
+
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="index.html">Home</a>
+  <a href="Portfolio.html">Webteknologier</a>
+   <a href="Astro-Pi_generelt.html">Astro-Pi</a>
+   <a href="Dino_game_generelt.html">Dino-game</a>
+   <a href="Databaser.html">Databaser</a>
+</div>
+
+<div class="content">
+  <h2>Databaser</h2>
+    <br>
+
+    <img src="Databaser1.png" alt="Snow" style="width:30%;float:right">
+    
+    
+    En database er i princippet opbygget som et excel sheet, hvor den øverste række beskriver hvad overskriften er. Ofte kalder man den første kollone den primære ID og så skal man give dem et unikt ID. Det er vigtigt at de er unikke, da man ikke kan have to ens ting i databasen. Det ville give problemer hvis man kaldte tingen med primID 1 og der så kom to forskellige ting op. 
+    
+
+
+    <br><br>
+
+    Eksempelvis kunne man have en database over forskellige lamper til Andlight. Her har de alle et unikt primært ID, som består af bogstaver og tal. Når man har et produkt vil der også være beskrevet hvilket brand der har produceret den, størrelsen og farven. De tre egenskaber kaldes for attributter. 
+    
+    <br><br>
+    
+    Der er også forskellige relationer mellem entiterne og attributterne. For eksempel kan der være 1 til mange relationer (1-M), 1 til 1 relationer (1-1) eller mange til mange relationer (M-M). 
+
+
+    <br><br> 
+    Her er vores idé til at kunne implementere databasen i form af et spil forklaret:
+    <a href="database-implementeret.html"> Database implementeret i form af et spil </a>
+    <br><br> 
+    Her forklares noget af koden til spillet:
+    <a href="database-kode.html"> Koden i spillet </a>
+
+    
+</div>
+    
+
+</body>
+</html>

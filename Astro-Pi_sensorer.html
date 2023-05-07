@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="Astro-pi_style.css">
+<meta charset="UTF-8">
+
+    <style>    
+/* Style the side navigation */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+} 
+/* Side navigation links */
+.sidenav a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+}
+/* Change color on hover */
+.sidenav a:hover {
+  background-color: #ADD8E6;
+  color: white;
+}
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+    </style>
+
+
+<div class="sidenav">
+  <a href="index.html">Home</a>
+  <a href="Portfolio.html">Webteknologier</a>
+   <a href="Astro-Pi_generelt.html">Astro-Pi</a>
+   <a href="Dino_game_generelt.html">Dino-game</a>
+   <a href="Databaser.html">Databaser</a>
+</div>
+
+
+<div class="content"> 
+
+<h2>
+
+Sensorerne:
+
+</h2>  
+
+<br>
+
+<n1>
+Vi testede motion-sensoren ved at opstille et scenarie der minder om det på rumstation, hvor store dele af udstyret befinder sig på vægge langs lange gange, som vi vurderede til at være omtrent 1,5-2 meter bredde. herfra antog vi at astronauten vil passer i midten af gange omkring 1 meter for motion-sensoren. Dette har vi taget højde ved i vores test ved at opstille sensoren på en gang med lignende forhold. Ved testning af sensoren, finder vi blandt resultater. bl.a. ses det at sensoren har forskellig rækkevidde, alt efter hvor hurtigt personen foran motion-sensoren bevæger sig. Hvis man løb vil sensoren opdage en tidligere og slukke senere, end hvis man gik. Dette føre til at tiden nogenlunde jævner sig ud til at være det samme. Vi fandt dog frem til at 7 meter var det mest passende til det tempo vi antog at de vil bevæge sig med på rumstation, et sted omkring gåhastighed. Dette er en klar fejlkilde og vil vægte skævt i dataen. Testningen foregår vha. terminalen og vil derfor ikke forekomme i dataen vi får tilbage fra eksperimentet, her vil vi kun have den gennemsnitlige hastighed.  
+</n1> 
+
+<br>
+<br>
+    
+<h2>
+
+Testmålinger:
+
+</h2>
+
+<n1>
+Data:
+2.3527845364,  3.5246821638,  2.9835170375,  3.3627839013,  2.6719351683,  2.7810471492,  3.1739164824,  2.5917562954,  3.6194717893
+</n1>
+
+<br>
+<br>
+
+<n1>
+
+Her er et eksempel på 9 målinger af hastigheden, som vi regnet os frem til vha. følgende formel  “hastighed = 7 meter / tid sensoren er aktiv”. Som det ses ligger målingerne mellem 2,35-3,62 m/s. Dette finder vi passende med vores egen vurdering af hastigheden, med nogen afvigelse. Bemærk også at disse test ikke er udført i samme tempo eller af samme person, men er blevet vurderet enkeltvis ift. reelle hastighed. Her fandt vi at den ved samme tempo var i stand til at give samme resultat, det eneste problem er den upålidelige rækkevidde ved forskellige hastigheder. 
+
+<br>
+<br>
+
+I forbindelse med testningen af sensoren har vi også testet størrelsen af csv-filen, som bliver dannet i slutningen af programmet. Her fandt vi:
+
+<br>
+<br>
+
+- main.py fylder ca. 1.6 kb
+    
+<br>
+    
+- csv-file med 10 linjer fylder 0.12 kb
+
+<br>
+<br>
+
+Dette giver os masser af plads til at optage data uden at være bange for at overgå 3 mb.
+
+</n1>
+
+<br>
+<br>
+
+Tryk her for at komme tilbage:
+<br>
+<a href="Astro-Pi_vores.html"> Astro-Pi projekt </a>
+
+    </div>
+    
+</html>
